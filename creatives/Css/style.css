@@ -1,0 +1,809 @@
+@font-face {
+    font-family: MyriadProRegular;
+    src: url('../../../Fonts/MyriadPro/Myriad-Pro_Regular.ttf');
+}
+
+@font-face {
+    font-family: GothaProBold;
+    src: url('../../../Fonts/Gotham/GothaProBol.otf');
+}
+
+@font-face {
+    font-family: GothaProMedium;
+    src: url('../../../Fonts/Gotham/GothaProMed.otf');
+}
+
+@font-face {
+    font-family: GothaProBook;
+    src: url('../../../Fonts/Gotham/GothaProBook.otf');
+}
+
+:root {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.block {
+    position: relative;
+
+    width: 100%;
+
+    border-top: .1px solid transparent;
+}
+
+.content {
+    position: relative;
+
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.intro {
+    height: 880px;
+
+    background: url('../Images/intro-bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.page-header {
+    width: 100%;
+    height: 115px;
+
+    display: flex;
+
+    border-bottom: 1px solid rgba(255,255,255,.2);
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+
+    margin-left: 110px;
+}
+
+.menu {
+    height: inherit;
+    margin-right: 50px;
+
+    display: flex;
+}
+
+.menu li {
+    height: inherit;
+    margin: 0 10px;
+    padding: 0 5px;
+
+    line-height: 115px;
+}
+
+.menu li:hover {
+    border-bottom: 6px solid #0f749e;
+}
+
+.menu a {
+    display: block;
+
+    font-family: MyriadProRegular, sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+
+    white-space: nowrap;
+
+    color: white;
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts:hover {
+    border: none !important;
+}
+
+.contacts a {
+    margin: 0 15px;
+
+    font-size: 2rem;
+
+    color: white;
+}
+
+.intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-family: GothaProBold, sans-serif;
+    font-size: 15.2rem;
+
+    transition: 1s;
+
+    color: white;
+}
+
+.intro-text h3 {
+    font-family: GothaProMedium, sans-serif;
+    font-size: 2.47rem;
+
+    letter-spacing: .8em;
+    text-transform: uppercase;
+
+    color: #10749e;
+}
+
+#scroll-down {
+    position: absolute;
+    bottom: 165px;
+    left: 50%;
+
+    width: 65px;
+    height: 65px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+    transform: translateX(-50%);
+    text-align: center;
+
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+}
+
+#scroll-down::before {
+    position: absolute;
+    top: -40px;
+    left: -9px;
+
+    font-size: 15px;
+
+    content: 'Scroll Down';
+    white-space: nowrap;
+}
+
+.about-us {
+    height: 735px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    color: white;
+    background-color: #12759e;
+
+    justify-content: space-between;
+}
+
+.bg-letter {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 24.7rem;
+    font-weight: bold;
+
+    user-select: none;
+    transform: translateX(-50%);
+
+    color: rgba(255,255,255, .3);
+}
+
+.about-us h2 {
+    margin-top: 165px;
+
+    font-family: GothaProMedium, sans-serif;
+    font-size: 3.75rem;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.features {
+    margin-bottom: 125px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.features figcaption {
+    font-family: GothaProMedium, sans-serif;
+    font-size: 1.8rem;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.features li {
+    width: 275px;
+}
+
+.features article {
+    font-family: GothaProBook, sans-serif;
+    font-size: 1.5rem;
+}
+
+.our-news {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.news-block {
+    position: relative;
+
+    height: 445px;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.news-block > * {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+}
+
+.news-block img {
+    object-fit: cover;
+}
+
+.news {
+    padding: 80px 25px 0 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.news-block:nth-child(odd) {
+    flex-direction: row;
+
+    background-color: #222;
+}
+
+.news-time {
+    font-family: GothaProBook, sans-serif;
+    font-size: 1.3rem;
+
+    color: #aeaeae;
+}
+
+.news-title {
+    margin-top: 10px;
+
+    font-family: GothaProMedium, sans-serif;
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+}
+
+.news article {
+    margin-top: 10px;
+
+    font-family: GothaProBook, sans-serif;
+    font-size: 1.5rem;
+
+    color: #aeaeae;
+}
+
+.news-block:nth-child(even) .news > * {
+    color: #222;
+}
+
+.our-blog {
+    height: 1020px;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.our-blog .bg-letter {
+    z-index: -1;
+
+    color: #d9d9d9;
+}
+
+.our-blog h2 {
+    margin-top: 175px;
+
+    font-family: GothaProMedium, sans-serif;
+    font-size: 3.75rem;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.we-love {
+    margin-top: 115px;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 3rem;
+}
+
+.blog-list.content {
+    max-width: 1550px;
+}
+
+.blog-list {
+    margin: 55px auto;
+
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    justify-content: space-between;
+}
+
+.blog-list img {
+    width: 275px;
+    height: 275px;
+}
+
+.blog-list figcaption {
+    margin-top: 25px;
+
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 1.8rem;
+
+    text-transform: uppercase;
+
+    color: #10749e;
+}
+
+.blog-list a {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+.blog-list article {
+    width: 80%;
+    margin: 25px auto;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 15px;
+
+    color: #222;
+}
+
+.quotes {
+    height: 350px;
+
+    display: flex;
+
+    color: white;
+    background-color: #0f749e;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    width: 500px;
+    margin: 0 25px;
+
+    display: flex;
+}
+
+.quote img {
+    width: 95px;
+    height: 80px;
+    margin-right: 30px;
+}
+
+.quote article {
+    width: 465px;
+    height: 95px;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 1.5rem;
+}
+
+.why-we {
+    height: 845px;
+
+    display: flex;
+
+    color: white;
+    background: url('../Images/why_we-bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+
+    align-items: center;
+}
+
+.why-we .content {
+    padding: 0 25px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.abilities {
+    width: 480px;
+}
+
+.abilities h2 {
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 2.5rem;
+
+    text-transform: uppercase;
+}
+
+.abilities article {
+    margin-top: 25px;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 1.3rem;
+
+    color: #d9d9d9;
+}
+
+.chart {
+    width: 430px;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chart > div {
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 1.5rem;
+    line-height: 35px;
+
+    text-transform: uppercase;
+
+    background-color: #0f749e;
+}
+
+.design {
+    width: 84%;
+}
+
+.code {
+    width: 92%;
+}
+
+.layout {
+    width: 100%;
+}
+
+.phone {
+    width: 320px;
+    height: 550px;
+}
+
+.our-team {
+    height: 945px;
+
+    text-align: center;
+}
+
+.our-team .bg-letter {
+    z-index: -1;
+
+    color: #d9d9d9;
+}
+
+.our-team h2 {
+    margin-top: 175px;
+
+    font-family: GothaProMedium, sans-serif;
+    font-size: 3.75rem;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    color: #111;
+}
+
+.about-team {
+    margin-top: 135px;
+
+    display: block;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 3rem;
+}
+
+.our-team-list.content {
+    max-width: 1500px;
+}
+
+.our-team-list {
+    height: 500px;
+    margin-top: 55px;
+    padding: 0;
+
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.our-team-list img {
+    width: 275px;
+    height: 415px;
+
+    object-fit: cover;
+}
+
+.our-team-list figcaption {
+    position: relative;
+    z-index: 2;
+
+    width: 215px;
+    height: 95px;
+    margin: -50px auto;
+    padding-top: 15px;
+
+    line-height: 3em;
+
+    background-color: white;
+}
+
+.our-team-list .name {
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 2rem;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    color: #12759e;
+}
+
+.our-team-list .position {
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 1.5rem;
+
+    white-space: nowrap;
+}
+
+.get-in-touch {
+    height: 850px;
+
+    text-align: center;
+
+    background: url('../Images/get-in-touch_bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.get-in-touch .bg-letter {
+    font-family: 'Roboto';
+}
+
+.get-in-touch h2 {
+    margin-top: 175px;
+
+    font-family: GothaProMedium, sans-serif;
+    font-size: 3.75rem;
+
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.get-in-touch form {
+    margin-top: 125px;
+    padding: 0 25px;
+}
+
+.get-in-touch input::placeholder,
+.get-in-touch textarea::placeholder {
+    transition: .3s;
+
+    color: white;
+}
+
+.get-in-touch input:focus::placeholder,
+.get-in-touch textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.get-in-touch input,
+.get-in-touch textarea {
+    padding-left: 20px;
+
+    font-family: 'GothaProBook', sans-serif;
+    font-size: 1.5rem;
+
+    resize: none;
+
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    background-color: transparent;
+}
+
+.contact-info {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.get-in-touch input {
+    width: 32%;
+    height: 50px;
+}
+
+#cl-message {
+    width: 100%;
+    height: 150px;
+    margin-top: 25px;
+    padding-top: 25px;
+}
+
+
+#send-data {
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+
+    width: 225px;
+    height: 60px;
+
+    font-family: 'GothaProMedium', sans-serif;
+    font-size: 2.4rem;
+
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+
+    color: white;
+    border: none;
+    background-color: #0f749e;
+}
+
+.page-footer {
+    height: 115px;
+
+    line-height: 115px;
+
+    color: white;
+    background-color: #222;
+}
+
+.page-footer .content {
+    padding-left: 25px;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1075px) {
+    .quotes {
+        flex-direction: column;
+
+        justify-content: space-around;
+    }
+
+    .logo {
+        margin-left: 25px;
+    }
+
+    .menu {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .intro-text > * {
+        font-size: 6rem !important;
+
+        letter-spacing: 0 !important;
+    }
+
+    .intro-text h3 {
+        display: none;
+    }
+
+    .menu li:last-of-type {
+        display: none;
+    }
+
+    .about-us {
+        height: 1000px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .our-team-list {
+        margin-top: 20px;
+    }
+
+    .get-in-touch .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info input {
+        width: 100%;
+    }
+
+    .contact-info input:not(:first-of-type) {
+        margin-top: 25px;
+    }
+}
